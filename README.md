@@ -4,3 +4,4 @@ rosrun teleop_twist_keyboard teleop_twist_keyboard.py _speed:=2.0 _turn:=3.0
 rostopic echo /cmd_vel
 rostopic echo /joint_states
 roslaunch urdf_tutorial display.launch model:=$HOME/NCKH/src/my_robot/baocao\(1\).urdf
+check_urdf /home/bao/k67_ws/src/mo_phong_robot/base.urdf
