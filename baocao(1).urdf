@@ -4,20 +4,21 @@
   <link name="base_link">
     <visual>
       <geometry>
-        <box size="0.4 0.4 0.1"/> </geometry>
+        <box size="0.4 0.4 0.1"/> 
+      </geometry>
       <material name="blue">
         <color rgba="0 0 1 1"/> </material>
     </visual>
     <collision>
       <geometry>
-        <box size="0.4 0.4 0.1"/>
+        <mesh filename="package://baocao/src/meshes/base.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
     <inertial>
       <mass value="5"/> 
       <origin xyz="0 0 0" rpy="0 0 0"/> 
-      <inertia ixx="0.07083" ixy="0.0" ixz="0.0" iyy="0.07083" iyz="0.0" izz="0.666"/>
-    </inertial>
+      <inertia ixx="0.07083333" ixy="0.0" ixz="0.0" iyy="0.07083333" iyz="0.0" izz="0.13333333"/>    
+     </inertial>
   </link>
 
   <link name="befor_left_wheel">
@@ -31,7 +32,7 @@
       <geometry>
         <cylinder length="0.05" radius="0.05"/>
       </geometry>
- <surface>
+   <surface>
       <friction>
         <ode>
           <mu>1.0</mu>
@@ -41,14 +42,16 @@
     </surface>
     </collision>
     <inertial>
-      <mass value="0.1"/> <origin xyz="0 0 0" rpy="0 0 0"/>
-      <inertia ixx="0.0083" ixy="0.0" ixz="0.0" iyy="0.0083" iyz="0.0" izz="0.000125"/>
-       </inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.002625" ixy="-0.00225" ixz="0.00075" iyy="0.00256583" iyz="0.00075" izz="0.00456583"/>     
+    </inertial>
   </link>
 
   <joint name="joint_befor_left" type="continuous"> <parent link="base_link"/>
     <child link="befor_left_wheel"/>
-    <origin xyz="0.14 0.125 -0.05" rpy="0 1.570796 1.570796"/> <axis xyz="0 0 1"/> </joint>
+    <origin xyz="0.14 0.125 -0.05" rpy="0 1.570796 1.570796"/> <axis xyz="0 0 1"/> 
+  </joint>
 
   <link name="befor_right_wheel">
     <visual>
@@ -72,8 +75,9 @@
     </surface>
     </collision>
     <inertial>
-      <mass value="0.1"/> <origin xyz="0 0 0" rpy="0 0 0"/>
-      <inertia ixx="0.0083" ixy="0.0" ixz="0.0" iyy="0.0083" iyz="0.0" izz="0.000125"/>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.002625" ixy="-0.00225" ixz="0.00075" iyy="0.00256583" iyz="0.00075" izz="0.00456583"/>     
     </inertial>
   </link>
 
@@ -108,7 +112,7 @@
     <inertial>
       <mass value="0.1"/>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <inertia ixx="0.0083" ixy="0.0" ixz="0.0" iyy="0.0083" iyz="0.0" izz="0.000125"/>
+      <inertia ixx="0.002625" ixy="-0.00225" ixz="0.00075" iyy="0.00256583" iyz="0.00075" izz="0.00456583"/>     
     </inertial>
   </link>
 
@@ -139,11 +143,11 @@
         </ode>
       </friction>
     </surface>
-  </collision>
+    </collision>
     <inertial>
       <mass value="0.1"/>
       <origin xyz="0 0 0" rpy="0 0 0"/>
-      <inertia ixx="0.0083" ixy="0.0" ixz="0.0" iyy="0.0083" iyz="0.0" izz="0.000125"/>
+      <inertia ixx="0.002625" ixy="-0.00225" ixz="0.00075" iyy="0.00256583" iyz="0.00075" izz="0.00456583"/>     
     </inertial>
   </link>
 
@@ -261,7 +265,7 @@
 
 
 
-  <link name="court"> 
+ <!-- <link name="court"> 
     <visual>
       <geometry>
         <box size="15 8 0.01"/> 
@@ -293,18 +297,19 @@
     </collision>
   </link> 
 
-  <joint name="robot_to_court" type="fixed"><!--xe với sân -->
+  
+  <joint name="robot_to_court" type="fixed"> 
     <parent link="court"/>
     <child link="base_link"/>
     <origin xyz="-7.3 3.8 0.1" rpy="0 0 0"/>
   </joint>
 
    
-  <joint name="cot_joint" type="fixed"> <!--cột với sân -->
+  <joint name="cot_joint" type="fixed"> 
       <parent link="court"/>
       <child link="cot"/>
       <origin xyz="7.5 0 1.215" rpy="0 0 0"/>
-  </joint>
+  </joint> -->
 
 <gazebo>
     <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
