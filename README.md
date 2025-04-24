@@ -27,8 +27,8 @@ roslaunch urdf_tutorial display.launch model:=$HOME/NCKH/src/my_robot/baocao\(1\
  11. use launch 
  roslaunch baocao bao1.launch 
  
- 12.
- 
+ 12.bé hơn launch 
+ rosrun gazebo_ros spawn_model -file ~/k67_ws/src/bao/urdf/xe_bus.urdf -urdf -model bus_1
  
  13.
  
