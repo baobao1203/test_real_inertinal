@@ -30,8 +30,10 @@ roslaunch urdf_tutorial display.launch model:=$HOME/NCKH/src/my_robot/baocao\(1\
  12.bé hơn launch 
  rosrun gazebo_ros spawn_model -file ~/k67_ws/src/bao/urdf/xe_bus.urdf -urdf -model bus_1
  
- 13. xoa chạy lại trước catkin make 
+ 13. xoa chạy lại trước catkin make , làm sạch hoàn toàn, xóa cả thư mục
  rm -rf ~/catkin_ws/build
+ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+source ~/.bashrc
 
  14.
  
