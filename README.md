@@ -36,11 +36,16 @@ roslaunch urdf_tutorial display.launch model:=$HOME/NCKH/src/my_robot/baocao\(1\
 source ~/.bashrc
 
  14.
- 
+rosrun map_server map_saver -f ~/catkin_ws/src/baocao/src/maps/my_map
+  chạy và lưu bản đồ 
+eog ~/catkin_ws/src/baocao/src/maps/my_map.pgm
+  bằng trình xem ảnh
+ cat ~/catkin_ws/src/baocao/src/maps/my_map.yaml
+   File này sẽ chứa thông tin như độ phân giải, gốc bản đồ, v.v.
 
- 15.
+ 16.
  
- 16. source devel/setup.bash
+ 17. source devel/setup.bash
 
 
 rostopic echo /scanroslaunch urdf_tutorial display.launch model:=$HOME/k67_ws/src/urdf/my_car.urdf
