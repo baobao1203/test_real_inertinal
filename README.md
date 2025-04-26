@@ -49,3 +49,4 @@ rostopic echo /scanroslaunch urdf_tutorial display.launch model:=$HOME/k67_ws/sr
 rostopic echo /joint_states
 
 
+https://drive.google.com/drive/folders/1aydmQNC4h1NfkZR4bfXoRGj94G5g9x_J?usp=drive_link
