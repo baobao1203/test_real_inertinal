@@ -47,6 +47,11 @@ eog ~/catkin_ws/src/baocao/src/maps/my_map.pgm
  
  17. source devel/setup.bash
 
+ 18. reset môi trường của gazebo
+     killall gzserver gzclient roslaunch
+rm -rf ~/.gazebo/*
+rm -rf ~/.ros/log/*
+
 
 rostopic echo /scanroslaunch urdf_tutorial display.launch model:=$HOME/k67_ws/src/urdf/my_car.urdf
 ](https://git-scm.com/downloads)
